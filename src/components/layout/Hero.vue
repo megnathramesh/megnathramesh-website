@@ -1,7 +1,7 @@
 <template lang="html">
 
   <section class="hero section">
-		<h1 class="hero_text--title">Megnath Ramesh</h1>
+		<h1 class="app_text--title hero_text--title">Megnath Ramesh</h1>
 		<p class="hero_text--tag">Tech Champion</p>
 		<p class="hero_text--tag">Roboticist</p>
 		<p class="hero_text--tag">X-Factor</p>

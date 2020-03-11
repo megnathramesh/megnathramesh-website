@@ -24,14 +24,26 @@ export default {
 
 <style lang="scss">
 
+  @font-face {
+    font-family: 'Ranga'; 
+    src: url('./assets/fonts/Ranga-Bold.ttf'); 
+  }
+
+  @font-face {
+    font-family: 'Merriweather'; 
+    src: url('./assets/fonts/Merriweather-Regular.ttf'); 
+  }
+
   :root {
     --brand-colour: #12A962;
     --brand-contrastlight: white;
     --brand-contrastdark: #2c3e50;
 
-    --brand-text: normal 18px/1.3 'Lato';
-    --button-text: normal 700 15px 'Raleway';
-    --icon-text: normal 18px/1.3 'Lato';
+    --brand-text: normal 18px/1.5 'Merriweather';
+    --title-text: normal 45px 'Ranga';
+    --subtitle-text: bold 20px/1.0 'Merriweather';
+    --button-text: normal 18px 'Merriweather';
+    --icon-text: normal 70px/1.3 'Merriweather';
   }
 
   #app {
@@ -40,6 +52,8 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .app_text--title { font: var(--title-text); }
 
   .section {
     width: 70%;
@@ -55,13 +69,4 @@ export default {
     height: 100%;
     border-radius: 3px;
   }
-
-  .portfolio_item--title,
-  .text.big,
-  .contact_contents--title {
-    font-family: 'raleway';
-    font-weight: 700;
-    font-size: 30px;
-  }
-
 </style>

@@ -1,24 +1,24 @@
 <template lang="html">
 
   <section class="intro section" id="intro">
-		<h1 class="intro_text--title intro_item title">My Work</h1>
+		<h1 class="app_text--title intro_text--title intro_item title">My Work</h1>
     <FloatingImage :image="blart.image" class="intro_item intro_item blart img" />
     <div class="intro_item blart text">
-      <h1>{{blart.title}}</h1>
-      <p>{{blart.description}}</p>
-      <Button class="intro_item_button intro_item_button--blart" :link="blart.buttonlink" :text="blart.buttontext" />
+      <h1 class="intro_subtitle">{{blart.title}}</h1>
+      <p class="intro_description">{{blart.description}}</p>
+      <Button class="intro_button intro_button--blart" :link="blart.buttonlink" :text="blart.buttontext" />
     </div>
     <div class="intro_item ROS text">
-      <h1>{{ROS.title}}</h1>
-      <p>{{ROS.description}}</p>
-      <Button class="intro_item_button intro_item_button--ROS" :link="ROS.buttonlink" :text="ROS.buttontext" />
+      <h1 class="intro_subtitle">{{ROS.title}}</h1>
+      <p class="intro_description">{{ROS.description}}</p>
+      <Button class="intro_button intro_button--ROS" :link="ROS.buttonlink" :text="ROS.buttontext" />
     </div>
     <FloatingImage :image="ROS.image" class="intro_item intro_item ROS img" />
     <FloatingImage :image="RL.image" class="intro_item intro_item RL img" />
     <div class="intro_item RL text">
-      <h1>{{RL.title}}</h1>
-      <p>{{RL.description}}</p>
-      <Button class="intro_item_button intro_item_button--RL" :link="RL.buttonlink" :text="RL.buttontext" />
+      <h1 class="intro_subtitle">{{RL.title}}</h1>
+      <p class="intro_description">{{RL.description}}</p>
+      <Button class="intro_button intro_button--RL" :link="RL.buttonlink" :text="RL.buttontext" />
     </div>
   </section>
 
@@ -139,6 +139,15 @@
             grid-row-end: 8;
           }
         }
+      }
+
+      &_subtitle {
+        font: var(--subtitle-text);
+      }
+
+      &_button {
+        display: inline-block;
+        margin-top: 0;
       }
   }
 </style>
