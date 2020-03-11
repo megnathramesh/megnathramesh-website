@@ -45,9 +45,14 @@
 
     &_nameImg { width: 200px; }
 
-    &_text--tag {
-      margin-top: 7px;
-      margin-bottom: 30px;
+    &_text {
+      &--tag {
+        margin: 7px 0;
+        font-size: smaller;
+      }
+      &--intro { margin: 30px 0; }
+      &--title { margin: 30px 0; }
     }
+
   }
 </style>
