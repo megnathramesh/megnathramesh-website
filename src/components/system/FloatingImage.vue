@@ -56,8 +56,4 @@
       }
     }
   }
-
-  .image.abid { background-image: url("../../assets/pics/abid.jpg"); }
-  .image.red { background-image: url("../../assets/pics/red.jpg"); }
-  .image.sra { background-image: url("../../assets/pics/sra.jpg"); }
 </style>
