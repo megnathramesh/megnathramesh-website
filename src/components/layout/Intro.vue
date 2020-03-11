@@ -2,23 +2,23 @@
 
   <section class="intro section" id="intro">
 		<h1 class="app_text--title intro_text--title intro_item title">My Work</h1>
-    <FloatingImage :image="blart.image" class="intro_item intro_item blart img" />
+    <FloatingImage :image="blart.image" :colour="blart.colour" class="intro_item intro_item blart img" />
     <div class="intro_item blart text">
       <h1 class="intro_subtitle">{{blart.title}}</h1>
       <p class="intro_description">{{blart.description}}</p>
-      <Button class="intro_button intro_button--blart" :link="blart.buttonlink" :text="blart.buttontext" />
+      <Button class="intro_button intro_button--blart" :link="blart.buttonlink" :text="blart.buttontext" :colour="blart.colour" />
     </div>
     <div class="intro_item ROS text">
       <h1 class="intro_subtitle">{{ROS.title}}</h1>
       <p class="intro_description">{{ROS.description}}</p>
-      <Button class="intro_button intro_button--ROS" :link="ROS.buttonlink" :text="ROS.buttontext" />
+      <Button class="intro_button intro_button--ROS" :link="ROS.buttonlink" :text="ROS.buttontext" :colour="ROS.colour" />
     </div>
-    <FloatingImage :image="ROS.image" class="intro_item intro_item ROS img" />
-    <FloatingImage :image="RL.image" class="intro_item intro_item RL img" />
+    <FloatingImage :image="ROS.image" :colour="ROS.colour" class="intro_item intro_item ROS img" />
+    <FloatingImage :image="RL.image" :colour="RL.colour" class="intro_item intro_item RL img" />
     <div class="intro_item RL text">
       <h1 class="intro_subtitle">{{RL.title}}</h1>
       <p class="intro_description">{{RL.description}}</p>
-      <Button class="intro_button intro_button--RL" :link="RL.buttonlink" :text="RL.buttontext" />
+      <Button class="intro_button intro_button--RL" :link="RL.buttonlink" :text="RL.buttontext" :colour="RL.colour" />
     </div>
   </section>
 
@@ -46,21 +46,24 @@
           description: "Paulie Blart is a Security Robot and won 1st place at SFHacks 2018",
           buttonlink: "https://github.com/megalphian/PaulieBlart",
           buttontext: "View on Github",
-          image: "../../assets/img/blart.png"
+          image: "../../assets/img/blart.png",
+          colour: "#2F80ED"
         },
         ROS: {
           title: "ROS => Rover️ Projects",
           description: "I do a lot of really cool stuff, basically yeah it’s really cool",
           buttonlink: "https://github.com/megalphian/PaulieBlart",
           buttontext: "View on Github",
-          image: "../../assets/img/ROS.png"
+          image: "../../assets/img/ROS.png",
+          colour: "#27AE60"
         },
         RL: {
           title: "RL Certification",
           description: "I do a lot of really cool stuff, basically yeah it’s really cool",
           buttonlink: "https://github.com/megalphian/PaulieBlart",
           buttontext: "View on Github",
-          image: "../../assets/img/RL.png"
+          image: "../../assets/img/RL.png",
+          colour: "#EB5757"
         },
       }
     },

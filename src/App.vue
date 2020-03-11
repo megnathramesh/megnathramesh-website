@@ -67,6 +67,5 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    border-radius: 3px;
   }
 </style>

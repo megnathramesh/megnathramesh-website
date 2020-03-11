@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <div class="FloatingImage_box FloatingImage_box--color"></div>
+    <div class="FloatingImage_box FloatingImage_box--color" :style="'background-color: ' + colour"></div>
     <div class="FloatingImage_box FloatingImage_box--container">
       <div class="b-lazy image" :class="image"></div>
     </div>
@@ -11,7 +11,7 @@
 
   export default  {
     name: 'FloatingImage',
-    props: ["image"],
+    props: ["image", "colour"],
     mounted () {
 
     },
@@ -37,17 +37,14 @@
     &_box {
       width: 250px;
       height: 150px;
-      border-radius: 3px;
       position: relative;
 
       &--color {
-        background: #12A962;
         float: left;
         z-index: -1;
       }
 
       &--container {
-        box-shadow: -20px 26px 54px rgba(51, 51, 51, 0.28);
         z-index: -1;
         background-size: cover;
         background-color: transparent;
