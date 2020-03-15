@@ -2,23 +2,25 @@
 
   <section class="intro section" id="intro">
 		<h1 class="app_text--title intro_text--title intro_item title">My Work</h1>
-    <FloatingImage :image="blart.image" :colour="blart.colour" class="intro_item intro_item blart img" />
-    <div class="intro_item blart text">
-      <h1 class="intro_subtitle">{{blart.title}}</h1>
-      <p class="intro_description">{{blart.description}}</p>
-      <Button class="intro_button intro_button--blart" :link="blart.buttonlink" :text="blart.buttontext" :colour="blart.colour" />
+    <FloatingImage :image="scopear.image" :colour="scopear.colour" class="intro_item intro_item scopear img" />
+    <div class="intro_item scopear text">
+      <h1 class="intro_subtitle">{{scopear.title}}</h1>
+      <p class="intro_description">{{scopear.description}}</p>
+      <Button class="intro_button intro_button--scopear" :link="scopear.resumebuttontext" :text="scopear.resumebuttontext" :colour="scopear.colour" />
     </div>
-    <div class="intro_item ROS text">
-      <h1 class="intro_subtitle">{{ROS.title}}</h1>
-      <p class="intro_description">{{ROS.description}}</p>
-      <Button class="intro_button intro_button--ROS" :link="ROS.buttonlink" :text="ROS.buttontext" :colour="ROS.colour" />
+    <div class="intro_item rovr_the_explorer">
+      <h1 class="intro_subtitle">{{rovr_the_explorer.title}}</h1>
+      <p class="intro_description">{{rovr_the_explorer.description}}</p>
+      <Button class="intro_button intro_button--rovr_the_explorer" :link="rovr_the_explorer.githubbuttontext" :text="rovr_the_explorer.githubbuttontext" :colour="rovr_the_explorer.colour" />
+      <Button class="intro_button intro_button--rovr_the_explorer" :link="rovr_the_explorer.resumebuttontext" :text="rovr_the_explorer.resumebuttontext" :colour="rovr_the_explorer.colour" />
     </div>
-    <FloatingImage :image="ROS.image" :colour="ROS.colour" class="intro_item intro_item ROS img" />
-    <FloatingImage :image="RL.image" :colour="RL.colour" class="intro_item intro_item RL img" />
-    <div class="intro_item RL text">
-      <h1 class="intro_subtitle">{{RL.title}}</h1>
-      <p class="intro_description">{{RL.description}}</p>
-      <Button class="intro_button intro_button--RL" :link="RL.buttonlink" :text="RL.buttontext" :colour="RL.colour" />
+    <FloatingImage :image="rovr_the_explorer.image" :colour="rovr_the_explorer.colour" class="intro_item intro_item rovr_the_explorer img" />
+    <FloatingImage :image="paulie_blart.image" :colour="paulie_blart.colour" class="intro_item intro_item paulie_blart img" />
+    <div class="intro_item paulie_blart text">
+      <h1 class="intro_subtitle">{{paulie_blart.title}}</h1>
+      <p class="intro_description">{{paulie_blart.description}}</p>
+      <Button class="intro_button intro_button--paulie_blart" :link="paulie_blart.githubbuttonlink" :text="paulie_blart.githubbuttontext" :colour="paulie_blart.colour" />
+      <Button class="intro_button intro_button--paulie_blart" :link="paulie_blart.resumebuttonlink" :text="paulie_blart.resumebuttontext" :colour="paulie_blart.colour" />
     </div>
   </section>
 
@@ -41,29 +43,33 @@
     },
     data () {
       return {
-        blart: {
-          title: "Paulie Blart",
-          description: "Paulie Blart is a Security Robot and won 1st place at SFHacks 2018",
-          buttonlink: "https://github.com/megalphian/PaulieBlart",
-          buttontext: "View on Github",
-          image: "../../assets/img/blart.png",
+        scopear: {
+          title: "Software Developer at ScopeAR",
+          description: "This is what I currently do! I work with an awesome team of developers where we build an AR enabled work assistance application. We help rocket engineers train faster and get remote help at their fingertips",
+          resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
+          resumebuttontext: "More on Resume",
+          image: "../../assets/pics/scope_gang.jpg",
           colour: "#2F80ED"
         },
-        ROS: {
-          title: "ROS => Rover️ Projects",
-          description: "I do a lot of really cool stuff, basically yeah it’s really cool",
-          buttonlink: "https://github.com/megalphian/PaulieBlart",
-          buttontext: "View on Github",
-          image: "../../assets/img/ROS.png",
-          colour: "#27AE60"
-        },
-        RL: {
-          title: "RL Certification",
-          description: "I do a lot of really cool stuff, basically yeah it’s really cool",
-          buttonlink: "https://github.com/megalphian/PaulieBlart",
-          buttontext: "View on Github",
+        rovr_the_explorer: {
+          title: "RoVR the Explorer",
+          description: "Ever imagined how to build a real-time VR controlled robot? I tried to actually build it in a 24 hour hackathon. I was part of a team of 3, and we built a VR controlled rover with the VR headset receiving point cloud data that the robot was currently interpreting. Our project landed the 3rd place in HackED 2019, Alberta’s largest student hackathon with around 400 participants.",
+          githubbuttonlink: "https://github.com/megalphian/RoVR-the-Explorer",
+          githubbuttontext: "View on Github",
+          resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
+          resumebuttontext: "More on Resume",
           image: "../../assets/img/RL.png",
           colour: "#EB5757"
+        },
+        paulie_blart: {
+          title: "Paulie Blart",
+          description: "This was certainly my most memorable project. I travelled to San Francisco for SFHacks 2018 and got a taste of what the tech capital of the world was like. I assembled a team with 3 other awesome student developers at the hackathon, and built an autonomous security robot with facial recognition and text controls. We called it Paulie Blart, a play on Paul Blart: Mall Cop. Paulie went on to win the 1st place in the hackathon and a bunch of other prizes!",
+          githubbuttonlink: "https://github.com/megalphian/PaulieBlart",
+          githubbuttontext: "View on Github",
+          resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
+          resumebuttontext: "More on Resume",
+          image: "../../assets/pics/paulie_blart.jpg",
+          colour: "#27AE60"
         },
       }
     },
@@ -98,7 +104,7 @@
           grid-row-end: 2;
         }
 
-        &.blart {
+        &.scopear {
           &.img {
             grid-column-start: 3;
             grid-column-end: 5;
@@ -113,7 +119,7 @@
           }
         }
 
-        &.ROS {
+        &.rovr_the_explorer {
           &.img {
             grid-column-start: 7;
             grid-column-end: 8;
@@ -128,7 +134,7 @@
           }
         }
 
-        &.RL {
+        &.paulie_blart {
           &.img {
             grid-column-start: 4;
             grid-column-end: 4;
