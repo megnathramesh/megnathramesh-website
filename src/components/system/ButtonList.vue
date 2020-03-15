@@ -52,7 +52,7 @@
     li {
       float: left;
       list-style: none;
-      &:not(:first-of-type) { margin: 0 0 0 20px; }
+      &:not(:first-of-type) { margin: 0 0 0 40px; }
 
       a.buttonlist_icon {
         font: var(--icon-text);

@@ -39,8 +39,8 @@ export default {
     --brand-contrastlight: white;
     --brand-contrastdark: #2c3e50;
 
-    --brand-text: normal 18px/1.5 'Merriweather';
-    --title-text: normal 45px 'Ranga';
+    --brand-text: normal 20px/1.5 'Merriweather';
+    --title-text: normal 50px 'Ranga';
     --subtitle-text: bold 20px/1.0 'Merriweather';
     --button-text: normal 18px 'Merriweather';
     --icon-text: normal 70px/1.3 'Merriweather';
@@ -56,7 +56,7 @@ export default {
   .app_text--title { font: var(--title-text); }
 
   .section {
-    width: 70%;
+    width: 75%;
     margin: 25vh auto 15vh;
     @media screen and (max-width: 40em) { width: 85%; }
   }

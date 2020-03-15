@@ -2,23 +2,29 @@
 
   <section class="intro section" id="intro">
 		<h1 class="app_text--title intro_text--title intro_item title">My Work</h1>
-    <FloatingImage :image="blart.image" :colour="blart.colour" class="intro_item intro_item blart img" />
-    <div class="intro_item blart text">
-      <h1 class="intro_subtitle">{{blart.title}}</h1>
-      <p class="intro_description">{{blart.description}}</p>
-      <Button class="intro_button intro_button--blart" :link="blart.buttonlink" :text="blart.buttontext" :colour="blart.colour" />
+    <div class="intro_proj">
+      <FloatingImage :image="blart.image" :colour="blart.colour" class="intro_item intro_item--right blart img" />
+      <div class="intro_item intro_item--left blart text">
+        <h1 class="intro_subtitle">{{blart.title}}</h1>
+        <p class="intro_description">{{blart.description}}</p>
+        <Button class="intro_button intro_button--blart" :link="blart.buttonlink" :text="blart.buttontext" :colour="blart.colour" />
+      </div>
     </div>
-    <div class="intro_item ROS text">
-      <h1 class="intro_subtitle">{{ROS.title}}</h1>
-      <p class="intro_description">{{ROS.description}}</p>
-      <Button class="intro_button intro_button--ROS" :link="ROS.buttonlink" :text="ROS.buttontext" :colour="ROS.colour" />
+    <div class="intro_proj">
+      <FloatingImage :image="ROS.image" :colour="ROS.colour" class="intro_item intro_item--left ROS img" />
+      <div class="intro_item intro_item--right ROS text">
+        <h1 class="intro_subtitle">{{ROS.title}}</h1>
+        <p class="intro_description">{{ROS.description}}</p>
+        <Button class="intro_button intro_button--ROS" :link="ROS.buttonlink" :text="ROS.buttontext" :colour="ROS.colour" />
+      </div>
     </div>
-    <FloatingImage :image="ROS.image" :colour="ROS.colour" class="intro_item intro_item ROS img" />
-    <FloatingImage :image="RL.image" :colour="RL.colour" class="intro_item intro_item RL img" />
-    <div class="intro_item RL text">
-      <h1 class="intro_subtitle">{{RL.title}}</h1>
-      <p class="intro_description">{{RL.description}}</p>
-      <Button class="intro_button intro_button--RL" :link="RL.buttonlink" :text="RL.buttontext" :colour="RL.colour" />
+    <div class="intro_proj">
+      <FloatingImage :image="RL.image" :colour="RL.colour" class="intro_item intro_item--right RL img" />
+      <div class="intro_item intro_item--left RL text">
+        <h1 class="intro_subtitle">{{RL.title}}</h1>
+        <p class="intro_description">{{RL.description}}</p>
+        <Button class="intro_button intro_button--RL" :link="RL.buttonlink" :text="RL.buttontext" :colour="RL.colour" />
+      </div>
     </div>
   </section>
 
@@ -82,65 +88,36 @@
   .intro {
       position: relative;
       padding: 100px 0 0;
-      display: grid;
-      grid-template-columns: 5% 5% 5% 30% 5% 5% auto 10%;
-      grid-template-rows: 10rem 2rem 19rem 5rem 18rem 2rem;
       // @media screen and (max-width: 40em) {
       //   padding: 100px 7.5% 0px;
       //   display: block;
       // }
 
+      &_proj {
+        width: 90%;
+        margin: 15vh auto;
+        display: grid; 
+        grid-template-columns: 45% auto;
+        grid-template-rows: 100%;
+        grid-column-gap: 10%;
+      }
+
       &_item {
-        &.title {
+        &--left {
           grid-column-start: 1;
-          grid-column-end: 4;
-          grid-row-start: 1;
-          grid-row-end: 2;
+          grid-column-end: 2;
+          grid-row: 1;
         }
 
-        &.blart {
-          &.img {
-            grid-column-start: 3;
-            grid-column-end: 5;
-            grid-row-start: 2;
-            grid-row-end: 3;
-          }
-          &.text {
-            grid-column-start: 5;
-            grid-column-end: 8;
-            grid-row-start: 3;
-            grid-row-end: 4;
-          }
+        &--right {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row: 1;
         }
 
-        &.ROS {
-          &.img {
-            grid-column-start: 7;
-            grid-column-end: 8;
-            grid-row-start: 5;
-            grid-row-end: 6;
-          }
-          &.text {
-            grid-column-start: 2;
-            grid-column-end: 5;
-            grid-row-start: 4;
-            grid-row-end: 5;
-          }
-        }
-
-        &.RL {
-          &.img {
-            grid-column-start: 4;
-            grid-column-end: 4;
-            grid-row-start: 6;
-            grid-row-end: 7;
-          }
-          &.text {
-            grid-column-start: 6;
-            grid-column-end: 8;
-            grid-row-start: 7;
-            grid-row-end: 8;
-          }
+        &.img {
+          justify-self: center;
+          align-self: center;
         }
       }
 
