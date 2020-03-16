@@ -54,7 +54,7 @@
           description: "This is what I currently do! I work with an awesome team of developers where we build an AR enabled work assistance application. We help rocket engineers train faster and get remote help at their fingertips",
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
           resumebuttontext: "More on Resume",
-          image: "../../assets/pics/scope_gang.jpg",
+          image: require("../../assets/pics/scope_gang.jpg"),
           colour: "#2F80ED"
         },
         rovr_the_explorer: {
@@ -64,7 +64,6 @@
           githubbuttontext: "View on Github",
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
           resumebuttontext: "More on Resume",
-          image: "../../assets/img/RL.png",
           colour: "#EB5757"
         },
         paulie_blart: {
@@ -74,7 +73,7 @@
           githubbuttontext: "View on Github",
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
           resumebuttontext: "More on Resume",
-          image: "../../assets/pics/paulie_blart.jpg",
+          image: require("../../assets/pics/paulie_blart.jpg"),
           colour: "#27AE60"
         },
       }

@@ -1,9 +1,7 @@
 <template lang="html">
   <div>
     <div class="FloatingImage_box FloatingImage_box--color" :style="'background-color: ' + colour"></div>
-    <div class="FloatingImage_box FloatingImage_box--container">
-      <div class="b-lazy image" :class="image"></div>
-    </div>
+    <img class="FloatingImage_box FloatingImage_box--container image" v-bind:src="image" />
   </div>
 </template>
 
