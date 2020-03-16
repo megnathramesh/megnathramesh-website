@@ -92,7 +92,7 @@
 <style scoped lang="scss">
   .intro {
       position: relative;
-      padding: 100px 0 0;
+      margin-top: calc(25vh - 50px);
       // @media screen and (max-width: 40em) {
       //   padding: 100px 7.5% 0px;
       //   display: block;
