@@ -33,8 +33,8 @@
 
   .FloatingImage {
     &_box {
-      width: 250px;
-      height: 150px;
+      width: 300px;
+      height: 200px;
       position: relative;
 
       &--color {

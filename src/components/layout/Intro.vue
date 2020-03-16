@@ -7,15 +7,15 @@
       <div class="intro_item intro_item--left text">
         <h1 class="intro_subtitle">{{scopear.title}}</h1>
         <p class="intro_description">{{scopear.description}}</p>
-        <Button class="intro_button intro_button--scopear" :link="scopear.resumebuttontext" :text="scopear.resumebuttontext" :colour="scopear.colour" />
+        <Button class="intro_button intro_button--scopear" :new-tab="true" :link="scopear.resumebuttonlink" :text="scopear.resumebuttontext" :colour="scopear.colour" />
       </div>
     </div>
     <div class="intro_proj intro_proj--inverse">
       <div class="intro_item intro_item--right text">
         <h1 class="intro_subtitle">{{rovr_the_explorer.title}}</h1>
         <p class="intro_description">{{rovr_the_explorer.description}}</p>
-        <Button class="intro_button intro_button--rovr_the_explorer" :link="rovr_the_explorer.githubbuttontext" :text="rovr_the_explorer.githubbuttontext" :colour="rovr_the_explorer.colour" />
-        <Button class="intro_button intro_button--rovr_the_explorer" :link="rovr_the_explorer.resumebuttontext" :text="rovr_the_explorer.resumebuttontext" :colour="rovr_the_explorer.colour" />
+        <Button class="intro_button intro_button--rovr_the_explorer" :new-tab="true" :link="rovr_the_explorer.githubbuttonlink" :text="rovr_the_explorer.githubbuttontext" :colour="rovr_the_explorer.colour" />
+        <Button class="intro_button intro_button--rovr_the_explorer" :new-tab="true" :link="rovr_the_explorer.resumebuttonlink" :text="rovr_the_explorer.resumebuttontext" :colour="rovr_the_explorer.colour" />
       </div>
       <FloatingImage :image="rovr_the_explorer.image" :colour="rovr_the_explorer.colour" class="intro_item intro_item--left rovr_the_explorer img" />
     </div>
@@ -24,8 +24,8 @@
       <div class="intro_item intro_item--left text">
         <h1 class="intro_subtitle">{{paulie_blart.title}}</h1>
         <p class="intro_description">{{paulie_blart.description}}</p>
-        <Button class="intro_button intro_button--paulie_blart" :link="paulie_blart.githubbuttonlink" :text="paulie_blart.githubbuttontext" :colour="paulie_blart.colour" />
-        <Button class="intro_button intro_button--paulie_blart" :link="paulie_blart.resumebuttonlink" :text="paulie_blart.resumebuttontext" :colour="paulie_blart.colour" />
+        <Button class="intro_button intro_button--paulie_blart" :new-tab="true" :link="paulie_blart.githubbuttonlink" :text="paulie_blart.githubbuttontext" :colour="paulie_blart.colour" />
+        <Button class="intro_button intro_button--paulie_blart" :new-tab="true" :link="paulie_blart.resumebuttonlink" :text="paulie_blart.resumebuttontext" :colour="paulie_blart.colour" />
       </div>
     </div>
   </section>
@@ -52,7 +52,7 @@
         scopear: {
           title: "Software Developer at ScopeAR",
           description: "This is what I currently do! I work with an awesome team of developers where we build an AR enabled work assistance application. We help rocket engineers train faster and get remote help at their fingertips",
-          resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
+          resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view",
           resumebuttontext: "More on Resume",
           image: require("../../assets/pics/scope_gang.jpg"),
           colour: "#2F80ED"

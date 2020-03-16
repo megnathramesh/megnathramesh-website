@@ -32,5 +32,7 @@
     font: var(--button-text);
     padding: 1rem 2rem;
     text-decoration: none;
+    
+    margin-right: 20px;
   }
 </style>
