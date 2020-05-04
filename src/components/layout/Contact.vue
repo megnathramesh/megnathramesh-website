@@ -50,7 +50,7 @@
 <style scoped lang="scss">
   .contact {
     position: relative;
-    margin: 15vh auto 5vh; 
+    margin: 25vh auto 8vh; 
 
     &_bgani {
       @media screen and (max-width: 581px) {
