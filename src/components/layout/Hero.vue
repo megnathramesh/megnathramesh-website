@@ -1,9 +1,9 @@
 <template lang="html">
 
-  <div class="hero_dark">
+  <div class="">
     <section class="hero section">
       <div class="hero_left">
-        <h1 class="app_text--title hero_text--title">Megnath Ramesh</h1>
+        <h1 class="app_text--title hero_text--title">🚀 Megnath Ramesh</h1>
         <p class="hero_text--tag">Roboticist</p>
         <p class="hero_text--tag">Tech Champion</p>
         <p class="hero_text--tag">X-Factor</p>
@@ -51,7 +51,6 @@
 
     margin-top: 0;
     padding-top: 25vh;
-    color: white !important;
 
     &_dark {
       background: #333;
