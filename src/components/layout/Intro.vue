@@ -64,6 +64,7 @@
           githubbuttontext: "View on Github",
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
           resumebuttontext: "More on Resume",
+          image: require("../../assets/pics/me_1.jpg"),
           colour: "#EB5757"
         },
         paulie_blart: {
@@ -124,8 +125,9 @@
         }
 
         &.img {
-          justify-self: center;
-          align-self: center;
+          justify-self: flex-start;
+          align-self: flex-start;
+          position: relative;
         }
       }
 

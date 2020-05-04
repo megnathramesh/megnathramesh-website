@@ -56,7 +56,7 @@ export default {
   .app_text--title { font: var(--title-text);  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
   .section {
-    width: 75%;
+    width: 70%;
     margin: 25vh auto 15vh;
     @media screen and (max-width: 40em) { width: 85%; }
   }

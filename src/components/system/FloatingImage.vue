@@ -35,17 +35,17 @@
     &_box {
       width: 300px;
       height: 200px;
-      position: relative;
+      position: absolute;
 
       &--color {
         float: left;
         z-index: -1;
+        top: 20px;
+        left: 20px;
       }
 
       &--container {
         z-index: -1;
-        left: 20px;
-        top: -170px;
       }
     }
   }
