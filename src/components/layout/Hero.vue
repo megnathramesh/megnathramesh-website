@@ -22,22 +22,12 @@
 
   export default  {
     name: 'hero',
-    components: {
-    },
+    components: { },
     props: [],
-    mounted () {
-
-    },
-    data () {
-      return {
-      }
-    },
-    methods: {
-
-    },
-    computed: {
-
-    }
+    mounted () { },
+    data () { return { } },
+    methods: { },
+    computed: { }
 }
 
 
@@ -48,6 +38,14 @@
     display: grid;
     grid-template-columns: 50% auto;
     grid-template-rows: 40vh;
+
+    @media screen and (max-width: 581px) {
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto;
+
+      &_right { grid-row: 1; }
+      &_left { grid-row: 2; }
+    }
 
     margin-top: 0;
     padding-top: 25vh;
@@ -70,6 +68,5 @@
       &--intro { margin: 30px 0; }
       &--title { margin: 30px 0; }
     }
-
   }
 </style>
