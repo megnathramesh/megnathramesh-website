@@ -1,5 +1,10 @@
 <template lang="html">
-  <a class="button" :href="link" :title="text"  :style="'background-color: ' + colour" :target="newTab ? 'blank' : ''">{{text}}</a>
+  <div>
+    <a class="button" :href="link" :title="text"  :style="'background-color: ' + colour" :target="newTab ? 'blank' : ''">
+      {{text}}
+      <img class="rocket" src="../../assets/elements/rocket_emoji.png" />
+    </a>
+  </div>
 </template>
 
 <script lang="js">
@@ -7,20 +12,10 @@
   export default  {
     name: 'src-components-system-button',
     props: ['link', 'text', 'new-tab', 'colour'],
-    mounted () {
-
-    },
-    data () {
-      return {
-
-      }
-    },
-    methods: {
-
-    },
-    computed: {
-
-    }
+    mounted () { },
+    data () { return { } },
+    methods: { },
+    computed: { }
 }
 
 
@@ -34,5 +29,13 @@
     text-decoration: none;
     
     margin-right: 20px;
+    position: relative;
+  }
+
+  .rocket {
+    width: 30px;
+    position: absolute;
+    top: 30px;
+    right: -12px;
   }
 </style>
