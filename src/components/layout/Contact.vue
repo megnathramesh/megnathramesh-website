@@ -27,12 +27,12 @@
     },
     data () {
       return {
-        number_of_rockets: 15,
+        number_of_rockets: 25,
         list: [
           {link: "https://github.com/megalphian",           icon: "github"},
           {link: "https://twitter.com/MegnathR",            icon: "twitter"},
           {link: "https://linkedin.com/in/megnath-ramesh",  icon: "linkedin"},
-          // {link: "mailto:megnath@ualberta.ca",           icon: "envelope"},
+          {link: "mailto:megnath.ramesh@gmail.com",           icon: "envelope"},
         ]
       }
     },
