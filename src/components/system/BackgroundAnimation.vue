@@ -18,8 +18,7 @@
       for (var i = 0; i < this.total; i++) {
           var icon = icons[i];
           TweenLite.set(icon, { x: this.R(0, w), y: this.R(0, h) }); // place icon 
-          this.iconRotate(icon, TweenMax);
-          this.iconSway(icon, TweenMax);
+          this.iconAnimate(icon, TweenMax);
       }
     },
     data () {
@@ -29,25 +28,19 @@
     methods: {
       R (min, max) { return min + (Math.floor(10 * Math.random() * (max - min)) / 10) },
       S () { return Math.random() < 0.5 ? -1 : 1 },
-      iconRotate (icon, tween_max) {
-        // make icon rotate 
-        tween_max.to(icon, this.R(2, 5), {
-            rotationZ: 180 * this.S(),
-            repeat: 1,
-            yoyo: true,
-            ease: "easeInOut",
-            onComplete: () => { this.iconRotate(icon, tween_max); }
-        });
-      },
-      iconSway (icon, tween_max) {
-        // make icon sway 
-        tween_max.to(icon, this.R(2, 8), {
-            x: '+=' + this.R(-100, 100),
-            y: '+=' + this.R(-100, 100),
-            repeat: 0,
-            yoyo: false,
-            ease: "easeInOut",
-            onComplete: () => { this.iconSway(icon, tween_max); }
+      Rx (deg, x) {return Math.cos(deg) * x},
+      Ry (deg, y) {return Math.sin(deg) * y},
+      iconAnimate (icon, tween_max) {
+        // make icon rotate
+        var rad = this.R(-100,100);
+        var signx = Math.random() < 0.5 ? -1 : 1;
+        var signy = rad < 0 ? -1 : 1;
+        var rotation = (Math.asin(signy/Math.sqrt(2)) * 180 / Math.PI);
+        tween_max.to(icon, 6, {
+          y: '+=' + rad,
+          x: '+=' + (signx * rad),
+          rotationZ: rotation,
+          onComplete: () => { this.iconAnimate(icon, tween_max); }
         });
       },
     },
@@ -78,7 +71,7 @@
         height: 25px;
         background-size: contain;
         background-repeat: no-repeat;
-        // opacity: 0.5;
+        opacity: 0.5;
 
         background-image: url('../../assets/elements/rocket_emoji.png')
     }
