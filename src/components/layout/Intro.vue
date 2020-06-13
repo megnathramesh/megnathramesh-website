@@ -55,7 +55,7 @@
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view",
           resumebuttontext: "More on Resume",
           image: require("../../assets/pics/scope_gang.jpg"),
-          colour: "#2F80ED"
+          colour: "#E59B2B"
         },
         rovr_the_explorer: {
           title: "RoVR the Explorer",
@@ -65,7 +65,7 @@
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
           resumebuttontext: "More on Resume",
           image: require("../../assets/pics/me_1.jpg"),
-          colour: "#EB5757"
+          colour: "#B23B3A"
         },
         paulie_blart: {
           title: "Paulie Blart",
@@ -75,7 +75,7 @@
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
           resumebuttontext: "More on Resume",
           image: require("../../assets/pics/paulie_blart.jpg"),
-          colour: "#27AE60"
+          colour: "#971A1A"
         },
       }
     },

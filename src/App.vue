@@ -44,6 +44,10 @@ export default {
     --subtitle-text: bold 20px/1.0 'Merriweather';
     --button-text: normal 18px 'Merriweather';
     --icon-text: normal 70px/1.3 'Merriweather';
+
+    @media screen and (max-width: 40em) {
+      --icon-text: normal 50px/1.3 'Merriweather';
+    }
   }
 
   #app {

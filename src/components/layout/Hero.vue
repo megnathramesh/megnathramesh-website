@@ -3,7 +3,7 @@
   <div class="">
     <section class="hero section">
       <div class="hero_left">
-        <h1 class="app_text--title hero_text--title">🚀 Megnath Ramesh</h1>
+        <h1 class="app_text--title hero_text--title"> Megnath Ramesh</h1>
         <p class="hero_text--tag">Roboticist</p>
         <p class="hero_text--tag">Tech Champion</p>
         <p class="hero_text--tag">X-Factor</p>
@@ -66,7 +66,18 @@
         font-size: smaller;
       }
       &--intro { margin: 30px 0; }
-      &--title { margin: 30px 0; }
+      &--title { margin: 30px 0;
+      
+        &:before {
+          margin: 0 0 -8px 0;
+          background-image: url('../../assets/elements/rocket_emoji.png');
+          background-size: cover;
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          content:"";
+        } 
+      }
     }
   }
 </style>
