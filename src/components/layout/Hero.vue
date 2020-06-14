@@ -1,6 +1,6 @@
 <template lang="html">
 
-  <div class="">
+  <div class="header">
     <section class="hero section">
       <div class="hero_left">
         <h1 class="app_text--title hero_text--title"> Megnath Ramesh</h1>
@@ -9,9 +9,9 @@
         <p class="hero_text--tag">X-Factor</p>
         <p class="hero_text--intro">I love making innovative teams acheive their full potential with the relentless drive and enthusiasm I bring, along with a wide array of skills in robotics, AR/VR and IoT</p>
       </div>
-      <div class="hero_right">
-        <img class="hero_img" src="../../assets/pics/kingmeg.png" />
-      </div>
+      <!-- <div class="hero_right">
+        <img class="hero_img" src="../../assets/pics/me_1.jpg" />
+      </div> -->
     </section>
   </div>
 
@@ -34,6 +34,18 @@
 </script>
 
 <style scoped lang="scss">
+  .header {
+    background-image: url("../../assets/pics/me_1.jpg");
+
+    height: 1000px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .hero {
     display: grid;
     grid-template-columns: 50% auto;
@@ -76,7 +88,7 @@
           width: 50px;
           height: 50px;
           content:"";
-        } 
+        }
       }
     }
   }
