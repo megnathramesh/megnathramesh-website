@@ -37,7 +37,7 @@
       rgba(0, 0, 0, 0.75)
     ),url("../../assets/pics/me_1.jpg");
 
-    height: 85vh;
+    height: 90vh;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
