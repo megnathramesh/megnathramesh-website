@@ -39,8 +39,11 @@
 
     height: 90vh;
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+    @media screen and (min-width: 600px) {
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+    }
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +55,7 @@
     grid-template-rows: 40vh;
 
     // Mobile layout
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 600px) {
       grid-template-columns: 100%;
       grid-template-rows: auto auto;
     }
