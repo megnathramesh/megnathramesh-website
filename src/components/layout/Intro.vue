@@ -75,7 +75,7 @@
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
           resumebuttontext: "More on Resume",
           image: require("../../assets/pics/paulie_blart.jpg"),
-          colour: "#971A1A"
+          colour: "#0EBFE9"
         },
       }
     },
