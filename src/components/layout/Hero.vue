@@ -32,7 +32,10 @@
 
 <style scoped lang="scss">
   .header {
-    background-image: url("../../assets/pics/me_1.jpg");
+    background-image: linear-gradient(
+      rgba(0.5, 0.5, 0.5, 0.15),
+      rgba(0, 0, 0, 0.75)
+    ),url("../../assets/pics/me_1.jpg");
 
     height: 85vh;
 
