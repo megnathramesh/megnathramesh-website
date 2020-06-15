@@ -64,7 +64,7 @@
           githubbuttontext: "View on Github",
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
           resumebuttontext: "More on Resume",
-          image: require("../../assets/pics/me_1.jpg"),
+          image: require("../../assets/pics/hacked.jpg"),
           colour: "#B23B3A"
         },
         paulie_blart: {
@@ -75,7 +75,7 @@
           resumebuttonlink: "https://drive.google.com/file/d/1Xui-6thG-UhKMMHeErZQCkJtZO2SZ4cG/view?usp=sharing",
           resumebuttontext: "More on Resume",
           image: require("../../assets/pics/paulie_blart.jpg"),
-          colour: "#971A1A"
+          colour: "#0EBFE9"
         },
       }
     },

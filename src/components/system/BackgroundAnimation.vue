@@ -36,7 +36,7 @@
         var signx = Math.random() < 0.5 ? -1 : 1;
         var signy = rad < 0 ? -1 : 1;
         var rotation = (Math.asin(signy/Math.sqrt(2)) * 180 / Math.PI);
-        tween_max.to(icon, 6, {
+        tween_max.to(icon, 3, {
           y: '+=' + rad,
           x: '+=' + (signx * rad),
           rotationZ: rotation,
