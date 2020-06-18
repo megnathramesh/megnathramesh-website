@@ -51,18 +51,21 @@
   .contact {
     position: relative;
     margin: 25vh auto 8vh; 
-
+      
     &_bgani {
+      background-color: rgba(161, 161, 161, 0.24);  
+      backdrop-filter: blur(5px);
+
       @media screen and (max-width: 581px) {
-        bottom: -5vh;
+        bottom: -8vh;
         top: -3vh;
         left: -8vw;
         right: -8vw;
       }
-
+      
       @media screen and (min-width: 1281px) {
         left: -15vw;
-        bottom: -5vh;
+        bottom: -8vh;
         right: -15vw;
         top: -3vh;
       }
