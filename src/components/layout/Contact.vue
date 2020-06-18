@@ -26,8 +26,12 @@
 
     },
     data () {
+
+      var width = window.innerWidth;
+      var no_rockets = width <= 600 ? 14 : 25;
+      console.log(no_rockets);
       return {
-        number_of_rockets: 25,
+        number_of_rockets: no_rockets,
         list: [
           {link: "https://github.com/megalphian",           icon: "github"},
           {link: "https://twitter.com/MegnathR",            icon: "twitter"},
@@ -63,7 +67,7 @@
         right: -8vw;
       }
       
-      @media screen and (min-width: 1281px) {
+      @media screen and (min-width: 581px) {
         left: -15vw;
         bottom: -8vh;
         right: -15vw;
