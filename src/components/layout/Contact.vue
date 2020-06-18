@@ -29,7 +29,6 @@
 
       var width = window.innerWidth;
       var no_rockets = width <= 600 ? 14 : 25;
-      console.log(no_rockets);
       return {
         number_of_rockets: no_rockets,
         list: [
