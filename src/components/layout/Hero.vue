@@ -10,6 +10,9 @@
         <p class="hero_text--intro">I love making innovative teams acheive their full potential with the relentless drive and enthusiasm I bring, along with a wide array of skills in robotics, AR/VR and IoT</p>
       </div>
     </section>
+    <div class="scroll">
+      <img class="scroll_icon" src="../../assets/elements/arrow_down.png"/>
+    </div>
   </div>
 
 </template>
@@ -32,12 +35,15 @@
 
 <style scoped lang="scss">
   .header {
-    background-image: linear-gradient(
+    background-image: 
+    linear-gradient(
       rgba(0.5, 0.5, 0.5, 0.15),
       rgba(0, 0, 0, 0.75)
-    ),url("../../assets/pics/me_1.jpg");
+    ),
+    url("../../assets/pics/me_1.jpg");
 
-    height: 90vh;
+    display: grid;
+    min-height: 100vh;
 
     @media screen and (min-width: 600px) {
       /* Create the parallax scrolling effect */
@@ -51,22 +57,13 @@
 
   .hero {
     display: grid;
-    grid-template-columns: 540px auto;
-    grid-template-rows: 40vh;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 540px));
+    grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
+    margin-top: 20vh;
 
     // Mobile layout
     @media screen and (max-width: 600px) {
       grid-template-columns: 100%;
-      grid-template-rows: auto auto;
-    }
-
-    margin-top: 0;
-    padding-top: 20vh;
-
-    &_dark {
-      background: #333;
-      height: 90vh;
-      width: 100%;
     }
 
     &_content 
@@ -100,6 +97,23 @@
           content:"";
         }
       }
+    }
+  }
+
+  .scroll {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
+    align-items: center;
+
+    &_icon {
+      max-width:150px;
+      max-height:150px;
+      width: auto;
+      height: auto;
+      filter: contrast(15%);
+      opacity: 0.65;
     }
   }
 </style>
