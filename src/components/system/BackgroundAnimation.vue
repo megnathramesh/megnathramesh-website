@@ -18,7 +18,7 @@
       for (var i = 0; i < this.total; i++) {
           var icon = icons[i];
           TweenLite.set(icon, { x: this.R(0, w), y: this.R(0, h) }); // place icon 
-          this.iconAnimate(icon, TweenMax);
+          this.iconRotate(icon, TweenMax);
       }
     },
     data () {
@@ -30,17 +30,24 @@
       S () { return Math.random() < 0.5 ? -1 : 1 },
       Rx (deg, x) {return Math.cos(deg) * x},
       Ry (deg, y) {return Math.sin(deg) * y},
-      iconAnimate (icon, tween_max) {
+      iconRotate (icon, tween_max) {
         // make icon rotate
-        var rad = this.R(-100,100);
-        var signx = Math.random() < 0.5 ? -1 : 1;
-        var signy = rad < 0 ? -1 : 1;
-        var rotation = (Math.asin(signy/Math.sqrt(2)) * 180 / Math.PI);
+        var rad = this.R(0,1) * 120;
+        var rotation = Math.random(0,1) * 360;
+        var angleWithOffsetInRadians = ((rotation - 45) % 360) * (Math.PI / 180) ;
+        var x = (Math.cos(angleWithOffsetInRadians)  * rad);
+        var y = (Math.sin(angleWithOffsetInRadians) * rad);
+        
         tween_max.to(icon, 3, {
-          y: '+=' + rad,
-          x: '+=' + (signx * rad),
           rotationZ: rotation,
-          onComplete: () => { this.iconAnimate(icon, tween_max); }
+          onComplete: () => { this.iconMove(icon, tween_max, x, y); }
+        });
+      },
+      iconMove (icon, tween_max, x, y) {
+        tween_max.to(icon, 3, {
+          y: '+=' + y,
+          x: '+=' + x,
+          onComplete: () => { this.iconRotate(icon, tween_max); }
         });
       },
     },
