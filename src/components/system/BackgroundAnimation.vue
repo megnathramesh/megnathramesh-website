@@ -32,11 +32,11 @@
       Ry (deg, y) {return Math.sin(deg) * y},
       iconRotate (icon, tween_max) {
         // make icon rotate
-        var rad = this.R(0,1) * 120;
+        var rad = this.R(0,1) * 240;
         var rotation = Math.random(0,1) * 360;
         var angleWithOffsetInRadians = ((rotation - 45) % 360) * (Math.PI / 180) ;
-        var x = 2*(Math.cos(angleWithOffsetInRadians)  * rad);
-        var y = 2*(Math.sin(angleWithOffsetInRadians) * rad);
+        var x = (Math.cos(angleWithOffsetInRadians)  * rad);
+        var y = (Math.sin(angleWithOffsetInRadians) * rad);
         
         tween_max.to(icon, {
           rotationZ: rotation,
