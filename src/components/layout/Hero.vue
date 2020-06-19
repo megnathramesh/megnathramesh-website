@@ -60,6 +60,7 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 540px));
     grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
     margin-top: 20vh;
+    margin-bottom: 2vh;
 
     // Mobile layout
     @media screen and (max-width: 600px) {
