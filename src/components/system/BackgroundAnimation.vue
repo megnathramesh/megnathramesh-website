@@ -32,7 +32,7 @@
       Ry (deg, y) {return Math.sin(deg) * y},
       iconRotate (icon, tween_max) {
         // make icon rotate
-        var rad = this.R(0,1) * 240;
+        var rad = this.R(0,1) * 150;
         var rotation = Math.random(0,1) * 360;
         var angleWithOffsetInRadians = ((rotation - 45) % 360) * (Math.PI / 180) ;
         var x = (Math.cos(angleWithOffsetInRadians)  * rad);
@@ -40,7 +40,7 @@
         
         tween_max.to(icon, {
           rotationZ: rotation,
-          duration: this.R(1, 3),
+          duration: 3,
           onComplete: () => { this.iconMove(icon, tween_max, x, y); }
         });
       },
@@ -49,7 +49,7 @@
           y: '+=' + y,
           x: '+=' + x,
           ease: "power3.out",
-          duration: this.R(1, 3),
+          duration: 3,
           onComplete: () => { this.iconRotate(icon, tween_max); }
         });
       },
@@ -77,8 +77,8 @@
         position: absolute;
         pointer-events: none;
         z-index: -1;
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
         background-size: contain;
         background-repeat: no-repeat;
         opacity: 0.5;
