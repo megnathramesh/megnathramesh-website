@@ -35,7 +35,7 @@
           {link: "https://github.com/megalphian",           icon: "github"},
           {link: "https://twitter.com/MegnathR",            icon: "twitter"},
           {link: "https://linkedin.com/in/megnath-ramesh",  icon: "linkedin"},
-          {link: "mailto:megnath.ramesh@gmail.com",           icon: "envelope"},
+          {link: "mailto:megnath@hey.com",           icon: "envelope"},
         ]
       }
     },
