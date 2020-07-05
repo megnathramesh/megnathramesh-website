@@ -4,11 +4,12 @@
     <section class="hero section">
       <div class="hero_content">
         <h1 class="app_text--title hero_text--title"> Megnath Ramesh</h1>
-        <ButtonList class="contact_list" v-bind:list='list' />
         <p class="hero_text--tag">Roboticist</p>
         <p class="hero_text--tag">Tech Champion</p>
         <p class="hero_text--tag">X-Factor</p>
         <p class="hero_text--intro">I love making innovative teams acheive their full potential with the relentless drive and enthusiasm I bring, along with a wide array of skills in robotics, AR/VR and IoT</p>
+        <MiniButtonList class="contact_list" v-bind:list='list' />
+        <Button class="contact_button" :link="blog.link" :text="blog.title" :colour="blog.colour" />
       </div>
     </section>
   </div>
@@ -16,12 +17,14 @@
 </template>
 
 <script lang="js">
-  import ButtonList from './../system/ButtonList.vue'
+  import MiniButtonList from './../system/MiniButtonList.vue'
+  import Button from './../system/Button.vue'
 
   export default  {
     name: 'hero',
     components: {
-      ButtonList
+      MiniButtonList,
+      Button
      },
     props: [],
     mounted () { },
@@ -32,7 +35,12 @@
           {link: "https://twitter.com/MegnathR",            icon: "twitter"},
           {link: "https://linkedin.com/in/megnath-ramesh",  icon: "linkedin"},
           {link: "mailto:megnath.ramesh@gmail.com",           icon: "envelope"},
-        ]
+        ],
+        blog: {
+          title: "Blog",
+          link: "http://blog.megnath.com",
+          colour: "#2c3e50"
+        }
       } 
      },
     methods: { },
@@ -67,7 +75,7 @@
   .hero {
     display: grid;
     margin-top: 20vh;
-    margin-bottom: 2vh;
+    padding-bottom: 40px;
     grid-template-columns: minmax(240px, 540px);
     grid-template-rows: minmax(min-content, max-content);
 
@@ -87,12 +95,15 @@
       &--tag {
         margin: 7px 0;
         font-size: smaller;
-        color: #FFF;
+        color: var(--brand-colour);
+        font: var(--subtitle-text);
+        padding-bottom: 8px;
       }
       &--intro { 
         margin: 30px 0;
         margin-bottom: 0;
         color: #FFF;
+        padding-bottom: 8px;
        }
       &--title { 
         margin: 30px 0;
@@ -112,17 +123,16 @@
   }
 
   .contact {
-    &_contents {
-      grid-column: 2;
-    }
     &_list {
-      grid-column-start: 1;
-      grid-column-end: 1;
-      grid-row-start: 2;
-      grid-row-end: 3;
+      grid-row: 2;
       position: relative;
-      margin: 7px 0;
-      font-size: smaller;
+      margin: 20px 0;
+      min-height: 50px;
     }
+
+    &_button {
+        display: inline-block;
+        margin-top: 10px;
+      }
   }
 </style>

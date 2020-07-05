@@ -35,14 +35,14 @@ export default {
   }
 
   :root {
-    --brand-colour: #12A962;
+    --brand-colour: #F0EFEB;
     --brand-contrastlight: white;
     --brand-contrastdark: #2c3e50;
 
     --brand-text: normal 20px/1.5 'Merriweather';
     --title-text: normal 50px 'Rambla';
-    --subtitle-text: bold 20px/1.0 'Merriweather';
-    --button-text: normal 18px 'Merriweather';
+    --subtitle-text: bold 24px/1.0 'Rambla';
+    --button-text: normal 18px 'Rambla';
     --icon-text: normal 70px/1.3 'Merriweather';
 
     @media screen and (max-width: 40em) {
