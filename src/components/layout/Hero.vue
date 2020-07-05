@@ -4,28 +4,37 @@
     <section class="hero section">
       <div class="hero_content">
         <h1 class="app_text--title hero_text--title"> Megnath Ramesh</h1>
+        <ButtonList class="contact_list" v-bind:list='list' />
         <p class="hero_text--tag">Roboticist</p>
         <p class="hero_text--tag">Tech Champion</p>
         <p class="hero_text--tag">X-Factor</p>
         <p class="hero_text--intro">I love making innovative teams acheive their full potential with the relentless drive and enthusiasm I bring, along with a wide array of skills in robotics, AR/VR and IoT</p>
       </div>
     </section>
-    <div class="scroll">
-      <img class="scroll_icon" src="../../assets/elements/arrow_down.png"/>
-    </div>
   </div>
 
 </template>
 
 <script lang="js">
-
+  import ButtonList from './../system/ButtonList.vue'
 
   export default  {
     name: 'hero',
-    components: { },
+    components: {
+      ButtonList
+     },
     props: [],
     mounted () { },
-    data () { return { } },
+    data () { 
+      return {
+        list: [
+          {link: "https://github.com/megalphian",           icon: "github"},
+          {link: "https://twitter.com/MegnathR",            icon: "twitter"},
+          {link: "https://linkedin.com/in/megnath-ramesh",  icon: "linkedin"},
+          {link: "mailto:megnath.ramesh@gmail.com",           icon: "envelope"},
+        ]
+      } 
+     },
     methods: { },
     computed: { }
 }
@@ -45,7 +54,7 @@
     display: grid;
     min-height: 100vh;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 950px) {
       /* Create the parallax scrolling effect */
       background-attachment: fixed;
     }
@@ -57,13 +66,13 @@
 
   .hero {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 540px));
-    grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
     margin-top: 20vh;
     margin-bottom: 2vh;
+    grid-template-columns: minmax(240px, 540px);
+    grid-template-rows: minmax(min-content, max-content);
 
     // Mobile layout
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 950px) {
       grid-template-columns: 100%;
     }
 
@@ -82,6 +91,7 @@
       }
       &--intro { 
         margin: 30px 0;
+        margin-bottom: 0;
         color: #FFF;
        }
       &--title { 
@@ -101,20 +111,18 @@
     }
   }
 
-  .scroll {
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
-    align-items: center;
-
-    &_icon {
-      max-width:150px;
-      max-height:150px;
-      width: auto;
-      height: auto;
-      filter: contrast(15%);
-      opacity: 0.65;
+  .contact {
+    &_contents {
+      grid-column: 2;
+    }
+    &_list {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      position: relative;
+      margin: 7px 0;
+      font-size: smaller;
     }
   }
 </style>

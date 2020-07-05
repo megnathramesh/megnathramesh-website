@@ -102,7 +102,7 @@
         grid-template-rows: 100%;
         grid-column-gap: 10%;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 950px) {
           grid-template-columns: 100%;
           grid-template-rows: 280px auto;
         }
@@ -114,7 +114,7 @@
           grid-column-end: 2;
           grid-row: 1;
 
-          @media screen and (max-width: 600px) {
+          @media screen and (max-width: 950px) {
             grid-column: unset;
             grid-row: 2;
           }
@@ -126,7 +126,7 @@
           grid-column-end: 3;
           grid-row: 1;
 
-          @media screen and (max-width: 40em) {
+          @media screen and (max-width: 950px) {
             grid-column: unset;
             grid-row: 1;
             height: 30vh;
