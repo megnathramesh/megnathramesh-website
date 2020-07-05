@@ -28,7 +28,7 @@
     data () {
 
       var width = window.innerWidth;
-      var no_rockets = width <= 600 ? 14 : 25;
+      var no_rockets = width <= 600 ? 7 : 14;
       return {
         number_of_rockets: no_rockets,
         list: [

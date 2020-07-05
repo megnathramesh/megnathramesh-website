@@ -62,7 +62,7 @@
     display: grid;
     min-height: 100vh;
 
-    @media screen and (min-width: 950px) {
+    @supports not (-webkit-touch-callout: none) {
       /* Create the parallax scrolling effect */
       background-attachment: fixed;
     }
