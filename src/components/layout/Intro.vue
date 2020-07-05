@@ -98,13 +98,13 @@
       &_proj {
         margin: 15vh auto;
         display: grid; 
-        grid-template-columns: 55% auto;
+        grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
         grid-template-rows: 100%;
         grid-column-gap: 10%;
 
-        @media screen and (max-width: 40em) {
+        @media screen and (max-width: 600px) {
           grid-template-columns: 100%;
-          grid-template-rows: auto auto;
+          grid-template-rows: 280px auto;
         }
       }
 
@@ -114,7 +114,7 @@
           grid-column-end: 2;
           grid-row: 1;
 
-          @media screen and (max-width: 40em) {
+          @media screen and (max-width: 600px) {
             grid-column: unset;
             grid-row: 2;
           }
